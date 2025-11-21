@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethical Security Terminal | AI Hacking Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="terminal-container">
+        <div class="terminal-header">
+            <span class="terminal-title">ai-security-hub@terminal:~</span>
+            <div class="terminal-controls">
+                <span class="control-btn minimize"></span>
+                <span class="control-btn maximize"></span>
+                <span class="control-btn close"></span>
+            </div>
+        </div>
+        <div class="terminal-body">
+            <p id="welcome-message"></p>
+            
+            <p class="prompt">ai-security-hub@user:~$ ls -l modules/</p>
+            <pre class="module-list">
+total 3
+drwxr-xr-x 1 user user 512 Jan  1 12:00 <a href="#python-scripting" class="module-link">Python Scripting for NetSec</a>
+drwxr-xr-x 1 user user 512 Jan  1 12:00 <a href="#web-vuln" class="module-link">Web Vulnerability Basics</a>
+drwxr-xr-x 1 user user 512 Jan  1 12:00 <a href="#net-protocol" class="module-link">Network Protocol Analysis</a>
+            </pre>
+
+            <p class="prompt">ai-security-hub@user:~$ cat /modules/Python_Scripting_for_NetSec/example_code.py</p>
+            <pre class="code-output">
+# Simple Socket Connection Example
+# Educational Purpose: Demonstrates basic socket usage in Python
+
+import socket
+
+def create_connection(host, port):
+    try:
+        s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        s.settimeout(5) # Timeout after 5 seconds
+        result = s.connect_ex((host, port))
+        if result == 0:
+            print(f"[+] Port {port} is open on {host}")
+        else:
+            print(f"[-] Port {port} is closed or filtered on {host}")
+        s.close()
+    except socket.gaierror:
+        print(f"[!] Hostname '{host}' could not be resolved.")
+    except socket.error as err:
+        print(f"[!] Socket error: {err}")
+
+# Example usage
+# create_connection('scanme.nmap.org', 80)
+            </pre>
+            <p class="prompt">ai-security-hub@user:~$ <span class="blinking-cursor">_</span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
