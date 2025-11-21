@@ -1,0 +1,125 @@
+/* style.css - Terminal Styling */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'monospace', 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.terminal-container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #1a1a1a; /* Slightly lighter black for the window */
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.terminal-header {
+    background-color: #2a2a2a;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #444;
+}
+
+.terminal-title {
+    color: #eee;
+    font-size: 14px;
+}
+
+.terminal-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.control-btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.control-btn.close { background-color: #ff5f57; }
+.control-btn.minimize { background-color: #ffbd2e; }
+.control-btn.maximize { background-color: #28ca42; }
+
+.terminal-body {
+    padding: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    white-space: pre-wrap; /* Preserve formatting like <pre> but wrap text */
+    word-wrap: break-word;
+}
+
+.prompt {
+    color: #00FF00;
+    margin-top: 15px;
+}
+
+#welcome-message {
+    margin-bottom: 20px;
+}
+
+.module-list {
+    color: #00FF00;
+    margin-left: 0;
+    padding-left: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.module-link {
+    color: #00FF00;
+    text-decoration: none;
+}
+
+.module-link:hover {
+    color: #66ff66;
+    text-decoration: underline;
+}
+
+.code-output {
+    background-color: #0a0a0a;
+    color: #00ff00;
+    padding: 15px;
+    margin-top: 10px;
+    border-left: 4px solid #00FF00;
+    font-family: 'monospace', 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+    white-space: pre;
+}
+
+/* Blinking Cursor Effect */
+.blinking-cursor {
+    display: inline-block;
+    background-color: #00FF00;
+    animation: blink 1s step-end infinite;
+    width: 10px; /* Adjust as needed */
+    height: 1.2em; /* Adjust based on font size */
+    vertical-align: text-bottom; /* Align with text */
+}
+
+@keyframes blink {
+    from, to {
+        background-color: transparent;
+    }
+    50% {
+        background-color: #00FF00;
+    }
+}
